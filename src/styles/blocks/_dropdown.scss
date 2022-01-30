@@ -1,0 +1,308 @@
+
+.dropdown {
+    display: flex;
+    gap: 30px;
+    margin: 30px 0 10px 0;
+    
+
+    &-filter {
+        width: 360px;
+        position: relative;
+
+        &-title {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 17px;
+            color: #000000;
+            text-transform: uppercase;
+            display: block;
+            cursor: pointer;
+            padding: 13px 16px;
+            fill: #000000;
+        }
+
+        &-svg {
+            padding-left: 11px;
+        }
+
+        &-drop {
+            position: absolute;
+            background-color: #FFFFFF;
+            z-index: 999;
+            padding: 16px;
+            box-shadow: $shadow;
+            width: 100%;
+            box-sizing: border-box;
+
+        }
+    ::-webkit-details-marker {display: none;}
+
+        &[open] {
+            box-shadow: $shadow;
+        }
+        
+        &[open] .dropdown-filter-title {
+            color: $main-color;
+            background-color: #FFFFFF;
+            position: relative;
+            z-index: 1000;
+            fill: $main-color;
+        }
+    }
+
+    /*For categories inside filter*/
+
+    &-subfilter {
+        margin-bottom: 18px;
+        
+        &-title {
+            display: block;
+            ::-webkit-details-marker {display: none;}
+            text-transform: uppercase;
+            padding: 11px;
+            border-left: 5px solid $main-color;
+            border-bottom: 1px solid #ebebeb;
+            @include main-text;
+            color: #6f6e6e;
+            cursor: pointer;
+        }
+
+        &[open] .dropdown-subfilter-title {
+            color: $main-color;
+        }
+
+        &:hover .dropdown-subfilter-title {
+            transition: 0.4s;
+            transform: scale(1.1);
+        }
+
+        &-list {
+            list-style: none;
+            padding-left: 15px;
+        }
+
+        &-item {
+            margin-bottom: 11px;
+        }
+
+        &-btn {
+            background-color: #FFFFFF;
+            border: none;
+            @include main-text;
+            color: #6f6e6e;
+            font-family: inherit;
+        }
+    }
+        
+
+    /*Part for sizing etc*/
+
+    &-sort {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        position: relative;
+
+            &-right[open] .dropdown-sort-title {
+                color: $main-color;
+            } 
+
+            &-right[open] .dropdown-sort-svg {
+                fill: $main-color;
+            }
+    
+            &-title {
+                font-weight: 600;
+                text-transform: uppercase;
+                @include main-text;
+                color: #6f6e6e;
+                display: block;
+                cursor: pointer;
+                padding: 13px 16px;
+            }
+
+            &-svg {
+                padding-left: 10px;
+                fill: #6f6e6e;
+
+            }
+    
+            &-drop {
+                position: absolute;
+                background-color: #FFFFFF;
+                z-index: 999;
+                padding: 16px;
+                box-shadow: $shadow;
+                list-style: none;
+                margin-top: 0;
+    
+            }
+        ::-webkit-details-marker {display: none;}
+            
+            &[open] .dropdown-sort-title {
+                color: $main-color;
+            }
+
+            &-oneline {
+                display: block;
+                margin-bottom: 20px;
+    
+                &:hover {
+                    color: $main-color;
+                    transition: 0.5s;
+                    transform: scale(1.3);
+                }
+            }
+
+            &-item {
+                margin-bottom: 11px;
+                
+            }
+
+            &-btn {
+                background-color: #FFFFFF;
+                border: none;
+                @include main-text;
+                color: #6f6e6e;
+                font-family: inherit;
+            }
+    
+    }
+}
+
+/* ANOTHER dd menu for page with single 
+product - color, size etc
+*/
+
+.dropdown-qualities {
+
+    display: flex;
+    justify-content: center;
+    margin-bottom: 49px;
+    
+    &-right {
+        position: relative;
+    }
+
+        &-right[open] .dropdown-sort-title {
+            color: $main-color;
+        } 
+
+        &-title {
+            font-weight: 600;
+            text-transform: uppercase;
+            @include main-text;
+            color: #6f6e6e;
+            display: block;
+            cursor: pointer;
+            padding: 13px 16px;
+            box-sizing: border-box;
+        }
+
+        &-svg {
+            padding-left: 9px;
+        }
+
+        &-drop {
+            position: absolute;
+            background-color: #FFFFFF;
+            z-index: 999;
+            padding: 16px;
+            box-shadow: $shadow;
+            list-style: none;
+            margin-top: 0;
+            right: 20px;
+
+        }
+    ::-webkit-details-marker {display: none;}
+        
+        &[open] .dropdown-sort-title {
+            color: $main-color;
+        }
+
+        &-oneline {
+            display: block;
+            margin-bottom: 20px;
+
+            &:hover {
+                color: $main-color;
+                transition: 0.5s;
+                transform: scale(1.1);
+            }
+        }
+
+        &-input {
+            width: 40px;
+        }
+
+        &-item {
+            margin-bottom: 11px;
+            
+        }
+
+        &-btn {
+            background-color: #FFFFFF;
+            border: none;
+            @include main-text;
+            color: #6f6e6e;
+            font-family: inherit;
+        }
+
+}
+
+/*Area of Media Query*/
+
+@media (max-width: $tablet-bpoint){
+
+    .dropdown {
+        display: flex;
+        justify-content: space-between;
+    }    
+
+    .dropdown-filter-title {
+        padding: 0;
+    }
+
+    .dropdown-sort-title {
+        padding: 0;
+    }
+
+}
+
+@media (max-width: $mobile-bpoint) {
+
+    .dropdown {
+        display: flex;
+        margin: 0;
+        margin-top: 10px;
+    }
+
+    .dropdown-filter {
+        width: 0;
+    }
+
+    .dropdown-filter-name {
+        display: none;
+    }
+
+    .dropdown-filter-svg {
+        transform: scale(2);
+        padding: 0;
+    }
+
+    .dropdown-sort-title {
+        font-size: 12px;
+        line-height: 14px;
+    }
+
+    .dropdown-qualities {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .dropdown-qualities-title {
+        font-size: 10px;
+        line-height: 12px;
+        padding: 0;
+    }
+}

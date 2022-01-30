@@ -1,0 +1,65 @@
+/* Variables (full list is in _var.scss file)*/
+
+@import "_var.scss";
+
+/* Mixins (full list is in _mixin.scss file)*/
+
+@import "_mixin.scss";
+
+/* Common characteristics for whole site settings*/
+
+@import "_main.scss";
+
+/* For Header navbar*/
+
+@import "blocks/_header.scss";
+
+/* Dropdown navbar menu*/
+
+
+/* For jumbothron*/
+
+@import "blocks/_jumbothron.scss";
+
+
+/*All dropdown menu*/
+
+@import "blocks/_dropdown.scss";
+
+
+/* For Slider*/
+
+@import  "blocks/_slider.scss";
+
+/* For cart*/
+
+@import  "blocks/_cart.scss";
+
+/* For Offers*/
+
+@import  "blocks/_offers.scss";
+
+
+/* For page with registration (ALL TWO SIDES)*/
+@import  "blocks/_form.scss";
+
+/* For Cards with description*/
+
+@import  "blocks/_cards.scss";
+
+/* For Items + one shop item is there too*/
+
+@import  "blocks/_items.scss";
+
+/* For pagination*/
+@import "blocks/_pagination.scss";
+
+/* For button under Items that leads to all Catalog Items*/
+
+@import "blocks/_button.scss";
+
+/* Footer starts here, section of servises below (delivery etc)*/
+
+@import "blocks/_footer.scss";
+
+  

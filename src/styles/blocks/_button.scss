@@ -1,0 +1,59 @@
+/* For button under Items that leads to all Catalog Items*/
+
+.items-button {
+    margin-top: 48px;
+    margin-bottom: 96px;
+
+    &-text {
+        font-size: 16px;
+        line-height: 19px;
+        border: 1px solid $main-color;
+        color: $main-color;
+        text-decoration: none;
+        padding: 14px 39px;
+        transition: 0.4s;
+        display: inline-block;
+    
+        &:hover {
+            background-color: $main-color;
+            color: #FFFFFF;
+            cursor: pointer;
+            animation: change-color 1s infinite;
+        }
+
+        @keyframes change-color {
+            0% {
+                background-color: $main-color;
+                color: #FFFFFF;
+            }
+
+            50% {
+                background-color: rgb(192, 87, 105);
+                color: rgb(233, 175, 184);
+            }
+
+            100% {
+                background-color: #FFFFFF;
+                color: $main-color;
+            }
+
+
+        }
+    }
+}
+
+@media (max-width: $tablet-bpoint) {
+    
+    .items-button {
+    margin-top: 17px;
+    
+    }
+}
+
+@media (max-width: $mobile-bpoint) {
+
+    .items-button {
+    margin-top: 25px;
+    margin-bottom: 96.5px;
+    }
+}

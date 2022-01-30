@@ -1,0 +1,318 @@
+/* Section of servises below (delivery etc)*/
+.services {
+    background: #222224;
+
+    &-list {
+        @include flex-distribution;
+        list-style: none;
+        gap: 30px;
+        flex-wrap: wrap;
+        align-items: center;
+        margin: 0;
+    }
+}
+
+/* For every item of the service*/
+
+.service {
+    padding-top: 103px;
+    padding-bottom: 104px;
+    flex: 1;
+    min-width: 340px;
+
+    &-heading {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 19.96px;
+        line-height: 24px;
+        color: #FBFBFB;
+        text-align: center;
+    }
+
+    &-text {
+        font-weight: 300;
+        @include main-text;
+        text-align: center;
+        color: #FBFBFB;
+    }
+}
+
+/* For registration form + quotation with review*/
+
+/*Common BG footer classes*/
+
+.registration {
+    background: url("../src/assets/footer-bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+
+    &-list {
+        @include flex-distribution;
+        list-style: none;
+        margin: 0;
+    }
+    
+}
+
+/*Quotation with review*/
+
+.review {
+
+    margin-top: 87px;
+
+    &-woman {
+        margin: auto;
+        display: block;
+    }
+
+    &-text {
+        font-size: 20px;
+        line-height: 24px;
+        text-align: center;
+        color: #222224;
+    
+    }
+
+    /*Information about subscribing starts here*/
+
+    &-name {
+        display: flex;
+        flex-direction: column;
+    }
+
+    &-bold {
+        font-style: normal;
+        font-weight: bold;
+        @include header-text;
+        text-align: center;
+        color: #222224;
+    }
+
+    &-normal {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 167.2%;
+        text-align: center;
+        color: #222224;
+    }
+}
+
+/*Information that's connected with form starts here*/
+
+.registration-form {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin-bottom: 156px;
+
+    &-input {
+        background-color: #E1E1E1;
+        border: none;
+        border-radius: 20px 0 0 20px;
+        padding: 18px 64px 17px 22px;
+        transition: 0.5s;
+
+        &:hover {
+            background-color: #d4d1d1;
+            cursor: pointer;
+        }
+    }
+
+    &-button {
+        background-color: #F16D7F;
+        border: none;
+        border-radius: 0 20px 20px 0;
+        @include main-text;
+        color: #FBFBFB;
+        padding: 20px 18px 20px 17px;
+        transition: 0.4s;
+
+        &:hover {
+            background-color: $main-color-hover;
+            cursor: pointer;
+            transform: scale(1.1);
+            
+        }
+    }
+}
+
+/*All information about contacts*/
+
+/*Common classes for contacts*/
+
+.contacts {
+    background: #222224;
+
+    &-info {
+        @include flex-distribution;
+    }
+
+    &-social {
+        padding-top: 24px;
+    }
+
+}
+
+
+.copyright {
+    font-size: 16px;
+    line-height: 19px;
+    color: #FBFBFB;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+/*Social-media icons*/
+
+.fa-facebook-f {
+    padding: 9px 12px;
+    color: black;
+    background-color: #FFFFFF;
+    transition: 0.4s;
+    display: inline-block;
+
+    &:hover {
+        background-color: $main-color;
+        cursor: pointer;
+        transform: scale(1.1);
+        color: #FFFFFF;
+    }
+}
+
+.fa-instagram {
+    padding: 9px;
+    color: black;
+    background-color: #FFFFFF;
+    transition: 0.4s;
+    display: inline-block;
+
+    &:hover {
+        background-color: $main-color;
+        cursor: pointer;
+        transform: scale(1.1);
+        color: #FFFFFF;
+    }
+}
+
+
+.fa-pinterest-p {
+    padding: 9px;
+    color: black;
+    background-color: #FFFFFF;
+    transition: 0.4s;
+    display: inline-block;
+
+    &:hover {
+        background-color: $main-color;
+        cursor: pointer;
+        transform: scale(1.1);
+        color: #FFFFFF;
+    }
+}
+
+
+.fa-twitter {
+    padding: 9px 8px;
+    color: black;
+    background-color: #FFFFFF;
+    transition: 0.4s;
+    display: inline-block;
+
+    &:hover {
+        background-color: $main-color;
+        cursor: pointer;
+        transform: scale(1.1);
+        color: #FFFFFF;
+    }
+}
+
+.for-backspace-product {
+    margin-top: 119px;
+}
+
+/*Area of Media Query*/
+
+@media (max-width: $tablet-bpoint) {
+
+    .service {
+        padding: 0;
+        gap: 48px;
+    }
+    
+    .services-list {
+        flex-direction: column;
+        align-items: center;
+        padding: 0;
+        margin-top: 48px;
+    }
+
+    .service-text {
+        width: 360px;
+    }
+
+    .service-text-last {
+        margin-bottom: 64px;
+    }
+
+    .review {
+        margin-top: 48px;
+    }
+
+    .review-text {
+        margin: 0;
+    }
+
+    .registration-list {
+        gap: 15px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .copyright {
+        margin: 0;
+        padding-top: 14px;
+        padding-bottom: 14px;
+    }
+
+    .contacts-social {
+        padding-top: 8px;
+    }
+
+    .for-backspace-product {
+        margin-top: 64px;
+    }
+}
+
+@media (max-width: $mobile-bpoint) {
+
+    .service {
+        padding: 0;
+        gap: 46px;
+    }
+
+    .review-text {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .contacts-social {
+        margin-bottom: 25px;
+    }
+
+    .copyright {
+        padding: 0;
+    }
+
+    .contacts-info {
+        display: flex;
+        flex-direction: column-reverse;
+        align-items: center;
+    }
+
+    .for-backspace-product {
+        margin-top: 64px;
+    }
+}

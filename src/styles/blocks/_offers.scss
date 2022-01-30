@@ -1,0 +1,52 @@
+/* For Offers*/
+
+.offers {
+    margin-top: 65px;
+}
+
+.offers-list {
+    @include flex-distribution;
+    flex-wrap: wrap;
+    list-style: none;
+    padding: 0;
+    gap: 1rem;
+    row-gap: 1rem;
+}
+
+.offer {
+    position: relative;
+    flex: 1;
+
+    & div {
+        @include second-layer;
+        text-align: center;
+        width: 100%;
+    }
+    
+    & img {
+        object-fit: cover;
+        width: 100%;
+        min-height: 111px;
+        min-width: 232.5px;
+    }
+
+    &-span-us {
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 19px;
+        text-align: center;
+        color: #FFFFFF;
+    }
+
+    &-span-pink {
+        font-weight: bold;
+        @include header-text;
+        text-align: center;    
+        color: $main-color;
+    }
+}
+
+
+.last {
+    flex-basis: 100%;
+}
