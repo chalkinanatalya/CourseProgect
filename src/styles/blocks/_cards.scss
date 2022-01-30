@@ -1,0 +1,121 @@
+/* For Cards with description*/
+.card {
+    border: 1px solid #EAEAEA;
+    height: 600px;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    box-sizing: border-box;
+    margin-top: -62px;
+    background-color: #FFFFFF;
+    position: relative;
+    z-index: 2;
+    
+    &-title {
+        @include main-text;
+        color: $main-color;
+        text-align: center;
+        font-style: normal;
+        font-weight: 300;
+    }
+
+    &-hr-pink {
+        max-width: 63px;
+        height: 2px;
+        border: 0;
+        background-color: #EF5B70;
+    }
+
+    &-header {
+        font-style: normal;
+        font-weight: 300;
+        font-size: 18px;
+        line-height: 22px;
+        color:#4D4D4D;
+        text-align: center;
+    }
+
+    &-text {
+        @include main-text;
+        text-align: center;
+        color: #5E5E5E;
+        max-width: 555px;
+        margin: auto;
+        font-weight: 300;
+    }
+
+    &-price {
+        @include header-text;
+        font-weight: 300;
+        color:#EF5B70;
+        text-align: center;
+        margin-bottom: 65px;
+    }
+
+    &-hr-gray {
+        max-width: 641px;
+        height: 2px;
+        border: 0;
+        background-color: #EAEAEA;
+        margin-bottom: 65px;
+    }
+
+    &-center {
+        display: flex;
+        justify-content: center;
+    }
+
+    /* Button under this card starts there*/
+    
+    &-btn {
+        padding: 10px 56px 10px 23px;
+        color: $main-color;
+        background-color: transparent;
+        border: 1px solid $main-color;
+        line-height: 44px;
+        transition: 0.3s;
+        @include main-text;
+        
+        
+            &:hover {
+                transform: rotateX(360deg);
+                background-color: $main-color;
+                color: #FFFFFF;
+                cursor: pointer;
+            }
+
+            &::before {
+                content: url(../src/assets/cart-pink.svg);
+                vertical-align: middle;
+                padding-right: 11px;
+            }
+
+            &:hover > &-txt {
+                color: white;
+            }
+    
+            &:hover::before {
+                content: url(../src/assets/cart.svg);
+            }
+    }
+
+}
+
+/*Area of Media Query*/
+
+@media (max-width: $tablet-bpoint) {
+
+        .card {
+            width: 100%;
+        }
+
+        .card-btn {
+            margin-bottom: 64px;
+        }
+}
+
+@media (max-width: $mobile-bpoint) {
+    
+    .card-btn {
+        margin-bottom: 64px;
+    }
+}

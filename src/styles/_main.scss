@@ -1,0 +1,25 @@
+/* Common characteristics for whole site settings*/
+
+body {
+    @include main-body;
+}
+
+main {
+    flex-grow: 1;
+}
+
+.container-special {
+    @include container-special;
+}
+
+.container {
+    @include container;
+}
+
+.center {
+    @include centerer;
+}
+
+footer {
+    flex: 0 0 auto;
+}

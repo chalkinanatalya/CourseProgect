@@ -1,0 +1,80 @@
+/* For pagination*/
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+    margin-bottom: 96px;
+    
+
+    &-pages {
+        display:flex;
+        justify-content: space-between;
+        border: 1px solid #C4C4C4;
+        border-radius: 5px;
+        width: 282px;
+        padding-right: 15px;
+        padding-left: 15px;
+        box-sizing: border-box;
+        margin: 0;
+    }
+
+    &-number {
+        display: flex;
+        text-decoration: none;
+        color: #C4C4C4;
+        font-weight: 300;
+        font-size: 16px;
+        line-height: 19px;
+        padding-top: 12px;
+        padding-bottom: 12px;  
+        transition: 0.4s;
+    
+        &:hover { 
+            color: $main-color;
+            cursor: pointer;
+            transform: scale(1.5);
+        }
+    }
+}
+
+.fa-angle-left {
+    color: #000000;
+    height: 14px;
+    margin-top: 3px;
+    transition: 0.4s;
+
+    &:hover {
+        color: $main-color;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+.fa-angle-right {
+    color: #000000;
+    height: 14px;
+    margin-top: 3px;
+    transition: 0.4s;
+
+    &:hover {
+        color: $main-color;
+        cursor: pointer;
+        transform: scale(1.1);
+    }
+}
+
+/*Area of Media Query*/
+
+@media (max-width: $tablet-bpoint) {
+    .pagination {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: $mobile-bpoint) {
+    .pagination {
+        margin-top: 40px;
+        margin-bottom: 64px;
+    }
+}
